@@ -25,9 +25,9 @@
         <td><%= order.customer.fam_name%></td>
         <td><%= order.customer.full_address%></td>
 
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Delete', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Show', order %></td>
+        <td><%= button_to 'Edit', edit_order_path(order) %></td>
+        <td><%= button_to 'Delete', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
       </tr>
     <% end %>

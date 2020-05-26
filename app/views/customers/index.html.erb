@@ -5,11 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Fam-Last-Name</th>
+      <th>Family Last Name</th>
 
-      <th>St-Number</th>
+      <th>Street Number</th>
 
-      <th>St-Name</th>
+      <th>Street Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,9 +20,9 @@
         <td><%= customer.fam_name %></td>
         <td><%= customer.st_numb %></td>
         <td><%= customer.st_name %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Show', customer %></td>
+        <td><%= button_to 'Edit', edit_customer_path(customer) %></td>
+        <td><%= button_to 'Delete', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

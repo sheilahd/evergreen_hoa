@@ -1,12 +1,12 @@
 class CustomersController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :catch_not_found
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
-  layout 'customer_layout'
+  # layout 'customer_layout'
   # GET /customers
   # GET /customers.json
   def index
     @customers = Customer.all
-    
+
   end
 
   # GET /customers/1

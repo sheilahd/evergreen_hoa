@@ -1,5 +1,7 @@
 class Customer < ApplicationRecord
   has_many :orders
+  has_many :comments
+  has_many :posts
   validates :fam_name, presence: true
   validates :st_name, presence: true
   validates :st_numb, presence: true
