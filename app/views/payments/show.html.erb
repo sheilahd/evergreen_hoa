@@ -1,0 +1,10 @@
+
+
+<p>The Annual HOA fee for your Household is   <strong><%= @payment.mult %> dollars. </strong></p>
+
+<p>Your due date is <strong>January 30th, 2021</strong></p>
+
+<p>Please contact us if you have any further questions.</p>
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

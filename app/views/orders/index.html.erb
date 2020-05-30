@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Orders</h1>
-
-
+<h1>Documents Orders List:</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Doc-Name</th>
-      <th>Doc-Count</th>
+      <th>Document Name</th>
+      <th>Document Count</th>
+
       <th>Description</th>
       <th>Family Name</th>
       <th>Address</th>
-      <th colspan="4"></th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
@@ -25,9 +24,9 @@
         <td><%= order.customer.fam_name%></td>
         <td><%= order.customer.full_address%></td>
 
-        <td><%= button_to 'Show', order %></td>
-        <td><%= button_to 'Edit', edit_order_path(order) %></td>
-        <td><%= button_to 'Delete', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%=link_to 'Delete', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
       </tr>
     <% end %>

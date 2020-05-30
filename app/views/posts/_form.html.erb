@@ -20,12 +20,14 @@
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
+
   <div class="field_customer">
-  <%= form.label :customer %>
-  <div class="customers">
-    <%= form.collection_select :customer_id, Customer.all,:id, :fam_name, include_blank: true%>
+    <%= form.label :customer %>
+    <div class="customers">
+      <%= form.collection_select :customer_id, Customer.all, :id, :fam_name, include_blank: true %>
+    </div>
   </div>
-</div>
+
 
   <div class="actions">
     <%= form.submit %>

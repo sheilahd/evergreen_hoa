@@ -1,14 +1,20 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
-  <strong>Title:</strong>
+  <strong>News Title:</strong>
   <%= @post.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>News:</strong>
   <%= @post.body %>
 </p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @post.customer.fam_name%>
+</p>
+
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

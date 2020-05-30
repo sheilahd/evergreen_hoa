@@ -22,6 +22,8 @@
   <!--  /  jumbotron -->
   <div class="container pt-4">
       <!-- about-->
+
+
       <div id="about"class="row">
         <div class="col-lg order-lg-2">
             <h3 class="mb-4">About Evergreen Community</h3>
@@ -36,6 +38,7 @@
             <p>Keep noise levels down..</p>
             <p>Be considerate of common areas.</p>
             <p>Pay attention to pets</p>
+            <%= link_to 'New Documents Order', new_order_path, class: 'nav-link'  %>
         </div>
 
         <div class="col-lg order-lg-3">
@@ -53,25 +56,36 @@
     <!-- /about-->
 
     <!--      blog-->
-  <h1 id="blog" class="display-4 text-center my-5 text-muted">Neighbors Portal and Community News</h1>
+
+
+
+  <h1 id="blog" class="display-4 text-center my-5 text-muted">Neighborhood News </h1>
 
  <ul class="list-group">
 
-<li class="list-group-item list-group-item-success">
-    <div class="d-flex justify-content-between">
-      <h5 class="mb-1">Covid 19 Update</h5>
-      <span class="badge badge-pill badge-info p-2">Comments</span>
-    </div>
-    <p class="mb-1">Please post in the comments if anyone in need of groceries delivery</p>
-  </li>
+
+
+    <%#= link_to posts_path do %>
+    <%#=post.title%> <%#=post.body%>
+    <%#end%>
+
+   <!-- <a class="list-group-item list-group-item-action active" data-toggle="list" href="#posts" role="tab">Home</a> -->
 
   <li class="list-group-item list-group-item-success">
     <div class="d-flex justify-content-between">
       <h5 class="mb-1">Lost Dog</h5>
       <span class="badge badge-pill badge-info p-2">Comments</span>
     </div>
-    <p class="mb-1"> Name: Lazy, House: 109 London Plain ct, last seen Friday afternoon</p>
+    <p class="mb-1"> Name: "Lazy", House: 109 London Plain ct, last seen Friday afternoon</p>
   </li>
+
+  <li class="list-group-item list-group-item-success">
+      <div class="d-flex justify-content-between">
+        <h5 class="mb-1">Covid 19 Update</h5><a href="#"></a>
+        <span class="badge badge-pill badge-info p-2">Comments</span>
+      </div>
+      <p class="mb-1">Please let us know if anyone in need of groceries delivery</p>
+    </li>
 
 <li class="list-group-item list-group-item-success">
     <div class="d-flex justify-content-between">
@@ -80,8 +94,12 @@
     </div>
     <p class="mb-1"> Let's make our little ones walk more pleasant and fun, post in the comments your address if you can show your Teddy Bear on the window</p>
 </li>
+<%= link_to 'Want to share Info with your neighbors?', new_post_path, class: 'nav-link'  %>
+
 </ul>
+
 <!-- /blog -->
+
 
 <!--callout button-->
        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#contact">Contact Us</button>

@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
-  <strong>Doc name:</strong>
+  <strong>Document Name:</strong>
   <%= @order.doc_name %>
 </p>
 
 <p>
-  <strong>Doc count:</strong>
+  <strong>Document Count:</strong>
   <%= @order.doc_count %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Description</strong>
   <%= @order.description %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order), :class => "btn btn-primary btn-sm" %>
+<%= link_to 'Edit', edit_order_path(@order), class:  "btn btn-primary btn-sm" %>
 <%= link_to 'Back', orders_path, :class => "btn btn-primary btn-sm" %>

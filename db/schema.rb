@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_26_032026) do
-
-  create_table "comments", force: :cascade do |t|
-    t.text "content"
-    t.integer "customer_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["customer_id"], name: "index_comments_on_customer_id"
-  end
+ActiveRecord::Schema.define(version: 2020_05_28_052822) do
 
   create_table "customers", force: :cascade do |t|
     t.string "fam_name"
@@ -38,11 +30,22 @@ ActiveRecord::Schema.define(version: 2020_05_26_032026) do
     t.index ["customer_id"], name: "index_orders_on_customer_id"
   end
 
+  create_table "payments", force: :cascade do |t|
+    t.boolean "pay_freq"
+    t.integer "customer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "sqft"
+    t.index ["customer_id"], name: "index_payments_on_customer_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
+    t.integer "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_posts_on_customer_id"
   end
 
 end

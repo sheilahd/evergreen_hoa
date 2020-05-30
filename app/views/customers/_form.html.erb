@@ -21,9 +21,13 @@
     <%= f.text_field :st_numb %>
   </div>
 
+
   <div class="field">
-    <%= f.label :st_name %>
-    <%= f.text_field :st_name %>
+    <%= f.label :st_name %><br>
+    <% Customer::STREETS.each do |s| %>
+      <%= f.radio_button :st_name, s %>
+      <%= f.label :st_name, s, value: s, class: "checkbox-label" %><br>
+    <% end %>
   </div>
 
 

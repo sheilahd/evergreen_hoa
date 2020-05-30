@@ -10,28 +10,30 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= o.label :doc_name %>
-    <%= o.text_field :doc_name %>
+  <div class="field_customer">
+  <%= o.label :Neighbor %>
+  <div class="customers">
+    <%= o.collection_select :customer_id, Customer.all,:id, :fam_name, include_blank: true%>
   </div>
+  </div>
+
+  <div class="field_documents">
+  <%= o.label :doc_name %>
+  <%= o.select(:doc_name, Order.documents) %>
+  </div>
+
+
 
   <div class="field">
     <%= o.label :doc_count %>
     <%= o.number_field :doc_count %>
   </div>
-
+<h5>Please add here the document you need if it is not listed above: </h5>
   <div class="field">
-    <%= o.label :description %>
+    <%#= o.label :description %>
     <%= o.text_area :description %>
   </div>
 
-  <div class="field_customer">
-  <%= o.label :customer %>
-  <div class="customers">
-    <%= o.collection_select :customer_id, Customer.all,:id, :fam_name, include_blank: true%>
-  </div>
-</div>
 
 
   <div class="actions">
