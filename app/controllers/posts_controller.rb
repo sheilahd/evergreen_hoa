@@ -26,15 +26,15 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
-    respond_to do |format|
+    # respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
+        flash.notice = "Your post  was  successfully placed."
+        redirect_to @post
       else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        flash.now.alert = @post.errors.full_messages.to_sentence
+        render :new
       end
-    end
+
   end
 
   # PATCH/PUT /posts/1
