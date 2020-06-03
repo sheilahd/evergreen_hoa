@@ -22,21 +22,18 @@
   <%= o.select(:doc_name, Order.documents) %>
   </div>
 
-
-
   <div class="field">
     <%= o.label :doc_count %>
     <%= o.number_field :doc_count %>
   </div>
-<h5>Please add here the document you need if it is not listed above: </h5>
+<h5>Description: </h5>
   <div class="field">
     <%#= o.label :description %>
     <%= o.text_area :description %>
   </div>
 
 
-
   <div class="actions">
-    <%= o.submit %>
+<%= o.submit value: @submit_text, "data-disable-with" => @submit_text, class: "btn btn-info btn-sm text-white" %>
   </div>
 <% end %>

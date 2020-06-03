@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h3>Neighbors Contact information</h3>
-<h5>Ordered by Family Last Name: </h5>
+<h5>Neighbors Contact information Ordered by Family Last Name:</h5>
 
-<table>
+
+<table class="table table-striped"  >
   <thead>
     <tr>
-      <th>Family Last Name</th>
+      <th>Family Name</th>
       <th>Phone Number</th>
       <th>Email</th>
       <th>Address</th>
 
-      <th colspan="4"></th>
+      <th colspan="6"></th>
     </tr>
   </thead>
 
@@ -22,7 +22,6 @@
         <td><%= customer.phone %></td>
         <td><%= customer.email %></td>
         <td><%= customer.full_address %></td>
-
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Delete', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Customer', new_customer_path, :class => "btn btn-primary btn-sm" %> <%= link_to 'Home', home_index_path, :class => "btn btn-primary btn-sm" %>
+<%= link_to 'New Neighbor', new_customer_path, :class => "btn btn-info btn-sm text-white" %> <%= link_to 'Home', home_index_path, :class => "btn btn-info btn-sm text-white" %>

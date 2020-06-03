@@ -1,36 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Neighbors News Post & Comments</h2>
 
+<img class="mb-4 rounded img-fluid max-width: 100% height: auto " <%= image_tag("jumbobanner.jpeg", border: 0) %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>News </th>
-        <th>Family Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= post.customer.fam_name%></td>
+<h2> News and Events: </h2>
 
 
 
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-  <table>
-  
+<tbody>
+<% @posts.each do |post| %>
+  <div class="container pt-2">
+
+    <h4 class="mb-2 ">Post Title: <%= post.title %></h4>
+    <h4 class="mb-2 text-muted"><%= post.body %></h4>
+    <h4 class="mb-2 ">Family Name: <%= post.customer.fam_name %></h4>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <br>
+    <br>
+</div>
+
+<% end %>
+</tbody>
 
 
 <br>
-<%= link_to 'New Post', new_post_path, :class => "btn btn-primary btn-sm" %> <%= link_to 'Home', home_index_path, :class => "btn btn-primary btn-sm" %>
+<%= link_to 'New Post', new_post_path, :class => "btn btn-info btn-sm text-white" %> <%= link_to 'Home', home_index_path, :class => "btn btn-info btn-sm text-white"  %>

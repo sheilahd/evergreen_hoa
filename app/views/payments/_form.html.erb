@@ -23,6 +23,7 @@
     <%= p.label :Annual_Payment, class: "checkbox-label" %><br>
   </div>
 
+
   <p>Please enter your house square footage below:</p>
 
 
@@ -32,7 +33,9 @@
   </div>
 
 <div class="actions">
-    <%= p.submit value: @submit_text, "data-disable-with" => @submit_text, class: "btn btn-primary" %>
+    <%= p.submit value: @submit_text, "data-disable-with" => @submit_text, class: "btn btn-info btn-sm text-white" %>
+  </div>
+
   </div>
 
 <% end %>

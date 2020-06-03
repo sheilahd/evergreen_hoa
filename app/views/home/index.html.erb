@@ -4,47 +4,49 @@
   <head>
 
  </head>
-  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <body  id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
 
   <!--    jumbotron -->
-          <div class="jumbotron jumbotron-fluid bg-info text-white">
+           <div class="jumbotron jumbotron-fluid bg-info text-white ">
+
         <div class="container text-sm-center pt-5">
-          <h3 class="display-3">Evergreen HOA  </h3>
+          <h3 class="display-4 ">Evergreen HOA  </h3>
           <h3 class="display-5">Cary, North Carolina </h3>
-            <h3 class="display-3">Welcome! </h3>
-          <%# <p class="lead">This is a site to be connected and make our lives easier</p> %>
-          <div class="btn-group mt-4" role="group" aria-label="Callout buttons">
-            <%# <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#order">Permit Orders</button> %>
-            <%# <a  class="btn btn-light btn-lg" href="#speakers">Neighborhood Info</a> %>
-              <%# <%= button_to 'Get Shark Info', orders_path, :method => :get,  :class => "btn btn-primary btn-lg"%>
-              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contact">Register as New Neighbor</button>
+            <h4 class="display-2">Welcome! </h3>
+
+
+            <a  class="btn btn-light" btn-lg text-white" <%= link_to 'Register as a New Neighbor', new_customer_path, class: 'nav-link'%></a>
+
             </div>
             </div>
             </div>
   <!--  /  jumbotron -->
+
+
   <div class="container pt-4">
       <!-- about-->
 
-
       <div id="about"class="row">
         <div class="col-lg order-lg-2">
-            <h3 class="mb-4">About Evergreen Community</h3>
+            <h3 class="mb-4 text-muted">About Evergreen Community</h3>
             <img class="mb-4 rounded img-fluid d-none d-sm-block" <%= image_tag("Test House.jpeg", border: 0) %>
             <p>Our beautiful Community is located in the heart of Cary</p>
             <p>This is a portal to keep our neighbors connected and informed!</p>
         </div>
 
         <div class="col-lg order-lg-1">
-            <h3 class="mb-4">Evergreen HOA Regulations</h3>
+            <h3 class="mb-4 text-muted" >Evergreen HOA Regulations</h3>
             <p>Pay your homeowners association fees. Living in a homeowners association community means that you are required to pay monthly fees to be a part of it.</p>
             <p>Keep noise levels down..</p>
             <p>Be considerate of common areas.</p>
             <p>Pay attention to pets</p>
-            <%= link_to 'New Documents Order', new_order_path, class: 'nav-link'  %>
+
+              <a  class="btn btn-info btn-lg text-white" <%= link_to ' Documents and Permits Orders Click Here!', new_order_path, class: 'nav-link'%></a>
+
         </div>
 
         <div class="col-lg order-lg-3">
-          <h3 class="mb-4">Neighbohood Info</h3>
+          <h3 class="mb-4 text-muted">Neighbohood Info</h3>
             <div class="list-group">
               <a href="https://www.townofcary.org/" class="list-group-item list-group-item-action"><strong>Cary Town</strong>: Local and updated information </a>
               <a href="https://www.greatschools.org/north-carolina/cary/7674-Laurel-Park-Elementary/" class="list-group-item list-group-item-action"><strong>Elementary School</strong>: Laurel Park Elementary</a>
@@ -61,7 +63,7 @@
 
 
 
-  <h1 id="blog" class="display-4 text-center my-5 text-muted">Neighborhood News </h1>
+  <h1 id="blog" class="display-5 text-center my-5 text-muted">Evergreen News and Events </h1>
 
  <ul class="list-group">
 
@@ -73,39 +75,46 @@
 
    <!-- <a class="list-group-item list-group-item-action active" data-toggle="list" href="#posts" role="tab">Home</a> -->
 
-  <li class="list-group-item list-group-item-success">
+
+  <li class="list-group-item list-group-item-secondary">
     <div class="d-flex justify-content-between">
-      <h5 class="mb-1">Lost Dog</h5>
-      <span class="badge badge-pill badge-info p-2">Comments</span>
+    <h5 class="mb-1">Lost Dog</h5>
     </div>
     <p class="mb-1"> Name: "Lazy", House: 109 London Plain ct, last seen Friday afternoon</p>
   </li>
 
-  <li class="list-group-item list-group-item-success">
-      <div class="d-flex justify-content-between">
-        <h5 class="mb-1">Covid 19 Update</h5><a href="#"></a>
-        <span class="badge badge-pill badge-info p-2">Comments</span>
-      </div>
-      <p class="mb-1">Please let us know if anyone in need of groceries delivery</p>
-    </li>
 
-<li class="list-group-item list-group-item-success">
-    <div class="d-flex justify-content-between">
-      <h5 class="mb-1">Teddy Bears show for kids </h5>
-      <span class="badge badge-pill badge-info p-2">Comments</span>
-    </div>
-    <p class="mb-1"> Let's make our little ones walk more pleasant and fun, post in the comments your address if you can show your Teddy Bear on the window</p>
+   <li class="list-group-item list-group-item-warning">
+   <div class="d-flex justify-content-between">
+   <h5 class="mb-1">Showing Support for our Covid 19 heroes</h5>
+   </div>
+   <p class="mb-1">  Decorate your front door with a white tie!</p>
+ </li>
+ <li class="list-group-item list-group-item-secondary">
+   <div class="d-flex justify-content-between">
+   <h5 class="mb-1">Landscaping works</h5>
+   </div>
+   <p class="mb-1"> Next Tuesday June 9th, 2020 afternoon</p>
+ </li>
+
+ <li class="list-group-item list-group-item-warning">
+ <div class="d-flex justify-content-between">
+ <h5 class="mb-1">Teddy Bear on  Windows</h5>
+ </div>
+ <p class="mb-1"> Let's make our walk more fun and pleasant!</p>
 </li>
-<%= link_to 'Want to share Info with your neighbors?', new_post_path, class: 'nav-link'  %>
 
 </ul>
+<br>
+<br>
+<a  class="btn btn-info btn-lg  text-white text-center" <%= link_to ' Want to share News and Events with your Neighbors? Click Here!', new_post_path, class: 'nav-link'%></a>
+
+
+
 
 <!-- /blog -->
 
 
-<!--callout button-->
-       <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#contact">Contact Us</button>
-<!--/callout button-->
 
 
 
@@ -135,11 +144,12 @@
          <div class="modal-dialog" role="document">
            <div class="modal-content">
              <div class="modal-header bg-info text-white">
-               <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+               <h5 class="modal-title" id="exampleModalLabel">New Neighbor Registration</h5>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
                </button>
              </div>
+
              <div class="modal-body">
 
   <!--     Registration Form-->
@@ -147,25 +157,29 @@
   <form>
       <div class="form-group">
       <label for="Family Name">Family Name:</label>
-      <input type="text" class="form-control" id="Family Name:" placeholder="Example input placeholder">
+      <input type="text" class="form-control" id="Family Name:">
       </div>
       <div class="form-group">
-      <label for="formGroupExampleInput2">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Another input placeholder">
+      <label for="Email">Email:</label>
+      <input type="email" class="form-control" id="email" >
       </div>
       <div class="form-group">
-      <label for="formGroupExampleInput2">Phone Number:</label>
-      <input type="phone" class="form-control" id="phone" placeholder="Another input placeholder">
+      <label for="Phone">Phone Number:</label>
+      <input type="phone" class="form-control" id="phone" >
       </div>
-      <label for="formGroupExampleInput2">Street Number:</label>
-      <input type="number" class="form-control" id="st_numb" placeholder="Another input placeholder">
+      <label for="Street#">Street Number:</label>
+      <input type="number" class="form-control" id="st_numb" >
       </div>
-      <label for="formGroupExampleInput2">Street Name:</label>
-      <input type="text" class="form-control" id="st_name" placeholder="Another input placeholder">
+      <label for="StreetNS">Street Name:</label>
+      <input type="text" class="form-control" id="st_name" >
       </div>
 
 
+                 </div>
 
+
+    <hr class="mb-4">
+      <button type="submit" class="btn btn-primary btn-lg">Register</button>
 </form>
 <!--     /Registration Form-->
 

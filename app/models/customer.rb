@@ -1,8 +1,8 @@
 class Customer < ApplicationRecord
   STREETS = ["London Plain ", "Wax Myrtle ", "Mint "]
-  has_many :orders
-  has_many :posts
-  has_many :payments
+  has_many :orders, dependent: :destroy
+  has_many :posts, dependent: :destroy
+  has_many :payments, dependent: :destroy
 
   validates :fam_name, presence: true
   validates :st_name, presence: true
@@ -16,5 +16,8 @@ class Customer < ApplicationRecord
 
 def full_address
     "#{st_numb} #{st_name} ct, Cary, NC, 27513"
-  end
+end
+
+
+
 end

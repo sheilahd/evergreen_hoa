@@ -11,6 +11,15 @@
     </div>
   <% end %>
 
+  <div class="field_customer">
+    <%= form.label :Family_Name %>
+    <div class="customers">
+      <%= form.collection_select :customer_id, Customer.all, :id, :fam_name, include_blank: true %>
+    </div>
+  </div>
+
+
+  <br>
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
@@ -21,15 +30,13 @@
     <%= form.text_area :body %>
   </div>
 
-  <div class="field_customer">
-    <%= form.label :customer %>
-    <div class="customers">
-      <%= form.collection_select :customer_id, Customer.all, :id, :fam_name, include_blank: true %>
-    </div>
-  </div>
 
+
+<br>
+<br>
 
   <div class="actions">
-    <%= form.submit %>
-  </div>
+      <%= form.submit value: @submit_text, "data-disable-with" => @submit_text, class: "btn btn-info btn-sm text-white" %>
+    </div>
+
 <% end %>

@@ -1,29 +1,26 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Documents Orders List:</h1>
-
-<table>
+<h3>Orders by Document Name:</h3>
+ <table class="table table-striped  " >
   <thead>
     <tr>
-      <th>Document Name</th>
-      <th>Document Count</th>
 
-      <th>Description</th>
-      <th>Family Name</th>
-      <th>Address</th>
-      <th colspan="5"></th>
+      <th >Document Name</th>
+      <th >Document Count</th>
+      <th >Description</th>
+      <th >Family Name</th>
+      <th  >Full Address</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
-    <% @orders.each do |order| %>
+   <tbody>
+      <% @orders.each do |order|  %>
       <tr>
-        <td><%= order.doc_name %></td>
+      <td ><%= order.doc_name %></td>
         <td><%= order.doc_count %></td>
         <td><%= order.description %></td>
         <td><%= order.customer.fam_name%></td>
         <td><%= order.customer.full_address%></td>
-
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%=link_to 'Delete', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Order', new_order_path, :class => "btn btn-primary btn-sm" %> <%= link_to 'Home', home_index_path, :class => "btn btn-primary btn-sm" %>
+<%= link_to 'New Order', new_order_path, :class => "btn btn-info btn-sm text-white" %> <%= link_to 'Home', home_index_path, :class => "btn btn-info btn-sm text-white" %>
