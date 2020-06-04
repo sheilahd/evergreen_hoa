@@ -1,11 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 
-<img class="mb-4 rounded img-fluid max-width: 100% height: auto " <%= image_tag("jumbobanner.jpeg", border: 0) %>
+<img class="mb-4  rounded img-fluid  max-width: 100% height: auto " <%= image_tag("jumbobanner.jpeg", border: 0) %>
+
 
 <h2> News and Events: </h2>
-
-
 
 <tbody>
 <% @posts.each do |post| %>
@@ -16,7 +15,7 @@
     <h4 class="mb-2 ">Family Name: <%= post.customer.fam_name %></h4>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <br>
     <br>
 </div>

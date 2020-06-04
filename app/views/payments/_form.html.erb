@@ -13,18 +13,17 @@
 
   <div class="field_customer">
   <%= p.label :Neighbor_Name%>
-  <div class="customers">
-    <%= p.collection_select :customer_id, Customer.all,:id, :fam_name, include_blank: true%>
+   <div class="customers">
+  <%= p.collection_select :customer_id, Customer.all,:id, :fam_name, include_blank: true%>
   </div>
-  </div>
-
+ </div>
   <div class="field">
     <%= p.check_box :pay_freq %>
     <%= p.label :Annual_Payment, class: "checkbox-label" %><br>
   </div>
 
 
-  <p>Please enter your house square footage below:</p>
+  <h4>Please enter your house square footage below to calculate your Annual Fee:</h4>
 
 
   <div class="field">
@@ -33,9 +32,6 @@
   </div>
 
 <div class="actions">
-    <%= p.submit value: @submit_text, "data-disable-with" => @submit_text, class: "btn btn-info btn-sm text-white" %>
-  </div>
-
-  </div>
-
+<%= p.submit value: @submit_text, "data-disable-with" => @submit_text, class: "btn btn-info btn-sm text-white" %>
+</div>
 <% end %>

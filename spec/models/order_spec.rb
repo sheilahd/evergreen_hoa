@@ -18,6 +18,7 @@ RSpec.describe Order, type: :model do
      expect(Order.count).to eq 0
    end
 
+
  it "is not valid without a doc_name" do
    subject.doc_name=nil
    expect(subject).to_not be_valid
