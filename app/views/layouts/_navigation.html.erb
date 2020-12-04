@@ -19,7 +19,15 @@
         <li class='nav-item'><%= link_to 'Neighbors', customers_path, class: 'nav-link' %></li>
         <li class='nav-item'><%= link_to 'Orders', orders_path, class: 'nav-link' %></li>
         <li class='nav-item'><%= link_to 'News and Events', posts_path, class: 'nav-link' %></li>
+        <%=link_to 'News', news_index_path %>
         <li class='nav-item'><%= link_to 'Annual Fees', payments_path, class: 'nav-link' %></li>
+
+        <% if current_user %>
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<% else %>
+<%= link_to 'Sign up', new_user_registration_path %>
+<%= link_to 'Sign in', new_user_session_path %>
+<%end%>
     </div>
   </div>
 </nav>
