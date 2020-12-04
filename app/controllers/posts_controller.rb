@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+
     # respond_to do |format|
       if @post.save
         flash.notice = "Your post  was  successfully placed."

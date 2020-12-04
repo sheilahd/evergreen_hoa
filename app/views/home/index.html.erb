@@ -5,13 +5,19 @@
     <title>HOA Website</title>
  </head>
   <body  id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
-
+<% if current_user %>
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<% else %>
+<%= link_to 'Sign up', new_user_registration_path %>
+<%= link_to 'Sign in', new_user_session_path %>
+<%end%>
+<%=link_to 'News', news_index_path %>
   <!--    jumbotron -->
     <div class="jumbotron jumbotron-fluid bg-info text-white ">
         <div class="container text-sm-center pt-5">
           <h3 class="display-4 ">Evergreen HOA  </h3>
           <h3 class="display-5">Cary, North Carolina </h3>
-            <h4 class="display-2">Welcome! </h3>
+            <h4 class="display-2">Welcome! </h4>
             <a  class="btn btn-light" btn-lg text-white" <%= link_to 'Register as a New Neighbor', new_customer_path, class: 'nav-link'%></a>
         </div>
     </div>
@@ -113,25 +119,6 @@
   <small>&copy; 2020 Evergreen HOA Website by Code the Dream</small>
 </div>
   <!--     /footer-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
