@@ -5,10 +5,6 @@ Created Simple Models:
 **Customer** has Many **Orders, Payments, Posts**.
 
 
-Styling Notes:
-Having issues with Table styling inside **Orders, Payments, Posts**
-**Show, Edit, Delete** links not responsive on Large Screen.
-This happens just when adding Bootstrap tables styling.
 
 
 Project Future Goals by Models:
